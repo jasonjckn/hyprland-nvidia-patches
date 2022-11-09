@@ -1,0 +1,13 @@
+diff --git a/render/gles2/renderer.c b/render/gles2/renderer.c
+index 2e38919a..97f78608 100644
+--- a/render/gles2/renderer.c
++++ b/render/gles2/renderer.c
+@@ -159,7 +159,7 @@
+ 		assert(wlr_egl_is_current(renderer->egl));
+ 
+ 		push_gles2_debug(renderer);
+-		glFlush();
++		glFinish();
+ 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+ 		pop_gles2_debug(renderer);
+ 
